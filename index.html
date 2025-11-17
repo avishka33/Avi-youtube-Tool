@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avi YouTube Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>YouTube නැරඹුම් පැය ගණක යන්ත්‍රය</h1>
+        <h3>Avi YouTube Tool</h3>
+
+        <div class="input-group">
+            <label for="videos">වීඩියෝ ගණන:</label>
+            <input type="range" id="videos" min="1" max="100" value="0" oninput="calculateWatchTime()">
+            <span id="videosValue" class="current-value">0</span>
+        </div>
+
+        <div class="input-group">
+            <label for="avgViews">සාමාන්‍ය වීඩියෝ නැරඹුම්:</label>
+            <input type="range" id="avgViews" min="1" max="10000" step="10" value="1" oninput="calculateWatchTime()">
+            <span id="avgViewsValue" class="current-value">1</span>
+        </div>
+
+        <div class="input-group">
+            <label for="avgLength">සාමාන්‍ය වීඩියෝ දිග (මිනිත්තු වලින්):</label>
+            <input type="range" id="avgLength" min="1" max="60" value="1" oninput="calculateWatchTime()">
+            <span id="avgLengthValue" class="current-value">1</span>
+        </div>
+
+        <div class="input-group">
+            <label for="retention">සාමාන්‍ය රඳවා තබා ගැනීමේ ප්‍රතිශතය (%):</label>
+            <input type="range" id="retention" min="1" max="100" step="1" value="0" oninput="calculateWatchTime()">
+            <span id="retentionValue" class="current-value">0%</span>
+        </div>
+
+        <div class="result-box">
+            <p>මුළු නැරඹුම් පැය ගණන: <span id="totalHours">00.00</span></p>
+            <p id="goalMessage" class="goal-achieved">ඔබට 4000 නැරඹුම් පැය ඉලක්කය ඉක්මවා ඇත! 🎉</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
